@@ -1,4 +1,4 @@
-package org.rygn.first_thread;
+package org.rygn.first_thread.synchronizers;
 
 import java.util.concurrent.BrokenBarrierException;
 import java.util.concurrent.Callable;
@@ -46,13 +46,13 @@ public class CyclicBarrierExampleThread implements Callable<Integer> {
 
 			if (this.start == moitie) {
 				try {
-					System.err.println("Le thread " + this.name + " a atteint la moitiÈ de sa t‚che");
+					System.err.println("Le thread " + this.name + " a atteint la moiti√© de sa t√¢che");
 					
-					System.err.println("\t -> " + (this.barrier.getNumberWaiting() + 1) + " threads actuellement ‡ la barriËre !");
+					System.err.println("\t -> " + (this.barrier.getNumberWaiting() + 1) + " threads actuellement √† la barri√®re !");
 
 					this.barrier.await();
 
-					System.out.println("BarriËre dÈpassÈe : Le thread " + name + " se remet ‡ l'oeuvre !");
+					System.out.println("Barri√®re d√©pass√©e : Le thread " + name + " se remet √† l'oeuvre !");
 				} 
 				catch (InterruptedException | BrokenBarrierException e) {
 					e.printStackTrace();

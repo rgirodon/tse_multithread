@@ -1,4 +1,4 @@
-package org.rygn.first_thread;
+package org.rygn.first_thread.synchronizers;
 
 import java.awt.BorderLayout;
 import java.awt.event.ActionEvent;
@@ -12,7 +12,7 @@ import javax.swing.JPanel;
 
 public class CountDownLatchExampleWindow extends JFrame {
 
-	JButton bouton = new JButton("Décrémenter le compte à rebours");
+	JButton bouton = new JButton("DÃ©crÃ©menter le compte Ã  rebours");
 	
 	JLabel info = new JLabel();
 
@@ -26,7 +26,7 @@ public class CountDownLatchExampleWindow extends JFrame {
 	     
 	     panneau.setLayout(new BorderLayout());
 	     
-	     this.info.setText("Compte à rebours : " + lock.getCount());
+	     this.info.setText("Compte Ã  rebours : " + lock.getCount());
 	     
 	     this.info.setHorizontalAlignment(JLabel.CENTER);
 	     
@@ -50,7 +50,7 @@ public class CountDownLatchExampleWindow extends JFrame {
 	              
 	        	   lock.countDown();
 	              
-	        	   info.setText("Compte à rebours : " + lock.getCount());
+	        	   info.setText("Compte Ã  rebours : " + lock.getCount());
 	           }
 	     });
 	     

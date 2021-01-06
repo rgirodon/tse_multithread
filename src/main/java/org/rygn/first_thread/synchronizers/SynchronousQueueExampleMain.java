@@ -1,4 +1,4 @@
-package org.rygn.first_thread;
+package org.rygn.first_thread.synchronizers;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;

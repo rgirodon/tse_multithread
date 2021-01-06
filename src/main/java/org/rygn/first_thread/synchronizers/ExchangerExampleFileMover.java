@@ -1,4 +1,4 @@
-package org.rygn.first_thread;
+package org.rygn.first_thread.synchronizers;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -23,7 +23,7 @@ public class ExchangerExampleFileMover implements Runnable {
 
 			System.out.println("---------------------------------------");
 			
-			System.out.println("Contenu de la liste cÙtÈ Mover : ");
+			System.out.println("Contenu de la liste c√¥t√© Mover : ");
 			
 			System.out.println(listDocument);
 			
@@ -48,7 +48,7 @@ public class ExchangerExampleFileMover implements Runnable {
 			}
 
 			try {
-				System.err.println("\t -> Liste vide du cÙtÈ Mover !");
+				System.err.println("\t -> Liste vide du c√¥t√© Mover !");
 				
 				listDocument = exchanger.exchange(listDocument);
 			} 

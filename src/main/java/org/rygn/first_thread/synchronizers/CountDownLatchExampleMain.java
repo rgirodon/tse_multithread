@@ -1,4 +1,4 @@
-package org.rygn.first_thread;
+package org.rygn.first_thread.synchronizers;
 
 import java.util.concurrent.CountDownLatch;
 
@@ -20,7 +20,7 @@ public class CountDownLatchExampleMain {
 					e.printStackTrace();
 				}
 				
-				System.out.println("Premier thread libéré  après le compte à rebours");
+				System.out.println("Premier thread libÃ©rÃ©  aprÃ¨s le compte Ã  rebours");
 			}
 		});
 
@@ -28,7 +28,7 @@ public class CountDownLatchExampleMain {
 			
 			public void run() {
 				
-				System.out.println("Deuxième thread en attente !..");
+				System.out.println("DeuxiÃ¨me thread en attente !..");
 				
 				try {
 					lock.await();
@@ -37,7 +37,7 @@ public class CountDownLatchExampleMain {
 					e.printStackTrace();
 				}
 				
-				System.out.println("Deuxième thread libéré  après le compte à rebours");
+				System.out.println("DeuxiÃ¨me thread libÃ©rÃ©  aprÃ¨s le compte Ã  rebours");
 			}
 		});
 

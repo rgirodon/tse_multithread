@@ -1,4 +1,4 @@
-package org.rygn.first_thread;
+package org.rygn.first_thread.synchronizers;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -37,7 +37,7 @@ public class ExchangerExampleFileFinder implements Runnable {
 
 			System.out.println("---------------------------------------");
 			
-			System.out.println("Contenu de la liste cÙtÈ Finder : ");
+			System.out.println("Contenu de la liste c√¥t√© Finder : ");
 			
 			System.out.println(listDocument);
 			
@@ -62,7 +62,7 @@ public class ExchangerExampleFileFinder implements Runnable {
 			}
 
 			try {
-				System.err.println("\t -> Liste remplie cÙtÈ Finder !");
+				System.err.println("\t -> Liste remplie c√¥t√© Finder !");
 				
 				listDocument = exchanger.exchange(listDocument);
 				

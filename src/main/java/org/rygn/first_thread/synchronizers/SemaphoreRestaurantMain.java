@@ -1,4 +1,4 @@
-package org.rygn.first_thread;
+package org.rygn.first_thread.synchronizers;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -15,7 +15,7 @@ public class SemaphoreRestaurantMain {
 		int i = 0;
 		
 		while (true) {
-			SemaphoreClientThread cli = new SemaphoreClientThread("Client N°" + (++i), sem);
+			SemaphoreClientThread cli = new SemaphoreClientThread("Client Nb" + (++i), sem);
 			
 			execute.execute(cli);
 
