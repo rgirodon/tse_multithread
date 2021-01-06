@@ -1,4 +1,4 @@
-package org.rygn.first_thread;
+package org.rygn.first_thread.lock;
 
 import java.util.concurrent.atomic.AtomicLong;
 import java.util.concurrent.locks.Condition;
@@ -48,7 +48,7 @@ public class BankAccount {
 		this.verrou.lock();
 
 		try {
-			long result = this.solde.addAndGet(montant);
+			this.solde.addAndGet(montant);
 			
 			this.printSolde();
 
@@ -60,7 +60,7 @@ public class BankAccount {
 
 				this.condition.signalAll();
 				
-				System.err.println("\n Montant après retrait (" + soldeApresRetrait + ") < découvert \n");
+				System.err.println("\n Montant aprÃ¨s retrait (" + soldeApresRetrait + ") >= dÃ©couvert \n");
 			}
 
 		} 

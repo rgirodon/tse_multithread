@@ -1,4 +1,4 @@
-package org.rygn.first_thread;
+package org.rygn.first_thread.lock;
 
 public class BankThreadMain {
 

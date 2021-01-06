@@ -1,4 +1,4 @@
-package org.rygn.first_thread;
+package org.rygn.first_thread.synch;
 
 public class SynchronizedThreadMain {
 

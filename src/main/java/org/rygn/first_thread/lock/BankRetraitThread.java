@@ -1,31 +1,33 @@
-package org.rygn.first_thread;
+package org.rygn.first_thread.lock;
 
 import java.util.Random;
 
-public class BankDepotThread extends Thread {
+public class BankRetraitThread extends Thread {
+
+	private static int NB_THREAD = 1;
 
 	private BankAccount ceb;
 
 	private Random rand = new Random();
 
-	public BankDepotThread(BankAccount c) {
+	public BankRetraitThread(BankAccount c) {
 
 		this.ceb = c;
 
-		this.setName("Dépôt");
+		this.setName("Retrait  " + NB_THREAD++);
 	}
 
 	public void run() {
 		
 		while (true) {
-			int nb = rand.nextInt(100);
+			int nb = rand.nextInt(300);
 			
 			long montant = Integer.valueOf(nb).longValue();
 			
-			ceb.depot(montant);
-			
+			ceb.retrait(montant);
+
 			try {
-				Thread.sleep(2000);
+				Thread.sleep(1000);
 			} 
 			catch (InterruptedException e) {
 			}
