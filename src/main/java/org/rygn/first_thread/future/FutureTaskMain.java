@@ -1,4 +1,4 @@
-package org.rygn.first_thread;
+package org.rygn.first_thread.future;
 
 import java.util.Random;
 import java.util.concurrent.Callable;
@@ -40,10 +40,10 @@ public class FutureTaskMain {
 
 		t.start();
 		
-		System.out.println("TraitementÖ");
+		System.out.println("Traitement...");
 		
 		try {
-			System.out.println("RÈsultat : " + ft1.get());
+			System.out.println("R√©sultat : " + ft1.get());
 		} 
 		catch (Exception e) {
 			e.printStackTrace();
@@ -59,13 +59,13 @@ public class FutureTaskMain {
 		
 		t.start();
 		
-		System.out.println("TraitementÖ");
+		System.out.println("Traitement...");
 
 		try {
-			System.out.println("RÈsultat : " + ft1.get(500, TimeUnit.MILLISECONDS));
+			System.out.println("R√©sultat : " + ft1.get(500, TimeUnit.MILLISECONDS));
 		} 
 		catch (InterruptedException | ExecutionException | TimeoutException e) {
-			System.err.println("La t‚che ‡ mis trop de temps ‡ rÈpondre.");
+			System.err.println("La t√¢che a mis trop de temps √† r√©pondre.");
 		}
 
 		showStatus(ft1);
@@ -73,10 +73,10 @@ public class FutureTaskMain {
 
 	private static void showStatus(FutureTask<Integer> ft1) {
 		if (ft1.isDone())
-			System.out.println("La t‚che c'est dÈroulÈe correctement");
+			System.out.println("La t√¢che s'est d√©roul√©e correctement");
 
 		if (ft1.isCancelled())
-			System.out.println("La t‚che a ÈtÈ annulÈe");
+			System.out.println("La t√¢che a √©t√© annul√©e");
 	}
 
 }

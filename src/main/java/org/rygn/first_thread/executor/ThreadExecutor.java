@@ -1,4 +1,4 @@
-package org.rygn.first_thread;
+package org.rygn.first_thread.executor;
 
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -15,9 +15,9 @@ public class ThreadExecutor {
 		// ExecutorService execute = Executors.newCachedThreadPool();
 		ExecutorService execute = Executors.newFixedThreadPool(2);
 		
-		Path chemin1 = Paths.get("C:\\Drivers");
-		Path chemin2 = Paths.get("C:\\Dell");
-		Path chemin3 = Paths.get("C:\\Apps");
+		Path chemin1 = Paths.get("/var/www/html/wordpress");
+		Path chemin2 = Paths.get("/home/rgirodon/repositories");
+		Path chemin3 = Paths.get("/home/rgirodon/telecomSaintEtienne");
 
 		Future<Long> ft1 = execute.submit(new FolderScannerThread(chemin1));
 		Future<Long> ft2 = execute.submit(new FolderScannerThread(chemin2));
@@ -27,7 +27,7 @@ public class ThreadExecutor {
 		try {
 			total = ft1.get() + ft2.get() + ft3.get();
 
-			System.out.println("nombre total de fichiers trouvés : " + total);
+			System.out.println("Nombre total de fichiers trouvÃ©s : " + total);
 		} 
 		catch (InterruptedException | ExecutionException e) {
 			e.printStackTrace();

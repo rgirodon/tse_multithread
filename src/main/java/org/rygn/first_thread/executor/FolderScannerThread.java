@@ -1,4 +1,4 @@
-package org.rygn.first_thread;
+package org.rygn.first_thread.executor;
 
 import java.io.IOException;
 import java.nio.file.DirectoryStream;
@@ -23,9 +23,9 @@ public class FolderScannerThread implements Callable<Long> {
 
 	public Long call() {
 
-		System.out.println("Exécution dans " + Thread.currentThread().getName());
+		System.out.println("ExÃ©cution dans " + Thread.currentThread().getName());
 		
-		System.out.println("Scan du dossier : " + this.path + " à la recherche des fichiers ");
+		System.out.println("Scan du dossier : " + this.path + " Ã  la recherche des fichiers ");
 
 		try (DirectoryStream<Path> listing = Files.newDirectoryStream(path)) {
 			
