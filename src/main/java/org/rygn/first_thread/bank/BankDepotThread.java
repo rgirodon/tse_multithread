@@ -1,4 +1,4 @@
-package org.rygn.first_thread.lock;
+package org.rygn.first_thread.bank;
 
 import java.util.Random;
 

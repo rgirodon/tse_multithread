@@ -11,7 +11,8 @@ public class BasicImplementsThread implements Runnable {
 
 			try {
 				Thread.sleep(2000);
-			} catch (InterruptedException e) {
+			} 
+			catch (InterruptedException e) {
 				e.printStackTrace();
 			}
 		}

@@ -7,11 +7,14 @@ public class AtomicThread implements Runnable {
 
 		for (int i = 0; i < 10; i++) {
 
-			System.out.println(Thread.currentThread().getName() + " - " + AtomicThreadMain.entier.incrementAndGet());
+			System.out.println(Thread.currentThread().getName() 
+								+ " - " 
+								+ AtomicThreadMain.entier.incrementAndGet());
 
 			try {
 				Thread.sleep(2000);
-			} catch (InterruptedException e) {
+			} 
+			catch (InterruptedException e) {
 				e.printStackTrace();
 			}
 		}

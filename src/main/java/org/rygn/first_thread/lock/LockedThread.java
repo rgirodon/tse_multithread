@@ -1,6 +1,6 @@
-package org.rygn.first_thread.synch;
+package org.rygn.first_thread.lock;
 
-public class SynchronizedThread implements Runnable {
+public class LockedThread implements Runnable {
 
 	@Override
 	public void run() {
@@ -9,7 +9,7 @@ public class SynchronizedThread implements Runnable {
 
 			System.out.println(Thread.currentThread().getName() 
 								+ " - " 
-								+ SynchronizedThreadMain.increment.incrementAndGet());
+								+ LockedThreadMain.increment.incrementAndGet());
 
 			try {
 				Thread.sleep(2000);

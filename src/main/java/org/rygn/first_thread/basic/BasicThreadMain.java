@@ -2,8 +2,7 @@ package org.rygn.first_thread.basic;
 
 public class BasicThreadMain {
 
-	public static Integer entier = 0;
-	
+	public static Integer entier = 0;	
 	
 	public static void main(String[] args) {
 		
